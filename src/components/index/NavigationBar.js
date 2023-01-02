@@ -17,7 +17,7 @@ class NavigationBar extends React.Component {
                     </a>
                 </div>
                 <div className='documentation'>
-                    <a>
+                    <a href= 'https://github.com/PratyushMakkar/UW_EngKid/tree/dev'>
                         <text>Documentation</text>
                     </a>
                 </div>

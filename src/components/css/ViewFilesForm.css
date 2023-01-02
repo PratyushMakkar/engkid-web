@@ -8,6 +8,9 @@
     align-items: center;
 }
 
+.wordcloud {
+    margin-left: 200px;
+}
 .ViewFilesButton{
     margin: 12px;
     width: 70%;
@@ -22,7 +25,17 @@
     text-align: center;
 }
 
-
+.error-box {
+    font-family:"oswald";
+    border-radius: 20px;
+    background-color: #ff6363;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 5%;
+    width: 30%;
+    height: 30px;
+}
 .Input-button {
     margin: 10px;
     background-color: #ffffff;

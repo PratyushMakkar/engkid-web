@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import {CreateUser} from "../../api/userService";
 
+import ReactWordcloud from 'react-wordcloud';
+
 import {
     CDBInput,
     CDBCard,
@@ -37,7 +39,7 @@ function ViewFilesForm({SubmitForm})  {
                         onChange={handleTextAreaChange}
                         value={wordcloudID}
                         name="username"
-                        placeholder= "WORDCLOUD ID" 
+                        placeholder= "GENERATE WORDCLOUD" 
                     />
                     <button disabled = {wordcloudID.length===0} className = "ViewFilesButton" type="submit">SUBMIT</button>
                 </div>
@@ -45,5 +47,6 @@ function ViewFilesForm({SubmitForm})  {
         </div>
     );
 }
+
 
 export default ViewFilesForm 

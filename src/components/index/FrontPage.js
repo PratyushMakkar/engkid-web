@@ -7,7 +7,7 @@ import CreateWordcloud from "./Wordcloud";
 
 function FrontPage() {
     const [wordcloudID, SetWordcloudID] = useState('')
-    const [status, SetStatus] = useState('empty')
+    const [status, SetStatus] = useState('')
     const [image, SetNetworkStatus] = useState('error')
 
     async function SubmitForm(wordcloudID) {
@@ -21,10 +21,12 @@ function FrontPage() {
                 <ViewFilesForm
                     SubmitForm = {SubmitForm}
                 />
-                <CreateWordcloud
-                    status = {status}
-                    image = {image}
-                />
+                <div className="wordcloud">
+                    <CreateWordcloud
+                        status = {status}
+                        image = {image}
+                    />
+                </div>
             </header>
         </div>    
     )

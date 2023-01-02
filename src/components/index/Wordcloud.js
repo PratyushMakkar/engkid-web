@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PacmanLoader from 'react-spinners/PacmanLoader'
+import '../css/ViewFilesForm.css'
+import ReactWordcloud from 'react-wordcloud';
 
 const override = {
   display: "green",
@@ -7,10 +9,49 @@ const override = {
   borderColor: "red",
 };
 
-function CreateWordcloud(status, img) {
-  if (status == 'success') {
+const callbacks = {
+  getWordColor: word => word.value > 50 ? "blue" : "red",
+  onWordClick: console.log,
+}
 
+const options = {
+  rotations: 2,
+  rotationAngles: [-90, 0],
+};
+
+const size = [600, 400];
+
+const words = [
+  {
+    text: 'told',
+    value: 64,
+  },
+  {
+    text: 'mistake',
+    value: 11,
+  },
+  {
+    text: 'thought',
+    value: 16,
+  },
+  {
+    text: 'bad',
+    value: 17,
+  },
+]
+
+function CreateWordcloud({status, wordcloud}) {
+  if (status == 'success') {
+    return (
+      <ReactWordcloud
+        callbacks={callbacks}
+        options={options}
+        size={size}
+        words={wordcloud}
+      />
+    );
   }
+
   if (status == 'loading') {
     return (
       <PacmanLoader
@@ -24,14 +65,22 @@ function CreateWordcloud(status, img) {
   }
 
   if (status == 'error') {
-
+    return (
+      <div className="error-box">
+        The Wordcloud ID is no longer valid!
+      </div>
+    )
   }
-
+  
   return (
-    <p1>
-      Hello World
-    </p1>
-  )
+    <ReactWordcloud
+      callbacks={callbacks}
+      options={options}
+      size={size}
+      words={words}
+    />
+  );
 }
+
 
 export default CreateWordcloud
