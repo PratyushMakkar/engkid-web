@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import ViewFilesForm from './components/index/ViewFilesForm';
-import FrontPage from './components/index/FrontPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

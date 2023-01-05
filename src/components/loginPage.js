@@ -1,29 +1,47 @@
-import React from 'react'
+import React, {useState}from 'react'
 import { Link } from 'react-router-dom'
 
 import '../components/css/App.css'
-import NavigationBar from './index/NavigationBar'
 
-export default function SignInPage() {
+
+export default function SignInPage({SubmitForm}) {
+    const [wordcloudID, SetWordcloudID] = useState('')
+    const [status, SetStatus] = useState('empty')
+
+    async function handleSubmit(e) {
+      e.preventDefault();
+      SetStatus('submitting')
+      const result = await SubmitForm(wordcloudID)
+      SetStatus('typing')
+    }
+
+    function handleTextAreaChange(e) {
+      SetWordcloudID(e.target.value);
+    }
+
     return (
-      <div>
         <div className="text-center m-5-auto">
             <h2>Sign in with your wordcloudID</h2>
-            <form action="/home">
+            <form onSubmit= {handleSubmit} action="/home">
                 <p>
                     <label>Wordcloud ID</label>
                     <Link to="/forget-password"><label className="right-label">Forget your ID?</label></Link>
                     <br/>
-                    <input type="password" name="password" required />
+                    <input disabled = {status==='submitting'}
+                        onChange={handleTextAreaChange}
+                        value={wordcloudID}
+                        type="password" 
+                        name="password"
+                        required 
+                      />
                 </p>
                 <p>
-                    <button id="sub_btn" type="submit" className='log-in-button'>Login</button>
+                    <button id="sub_btn" type="submit" disabled = {wordcloudID.length===0} lassName='log-in-button'>Login</button>
                 </p>
             </form>
             <footer>
                 <p>Unsure? <Link to="/register">Create a wordcloud ID to access data!</Link>.</p>
             </footer>
         </div>
-      </div>
     )
 }

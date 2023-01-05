@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import NavigationBar from "./NavigationBar";
-import ViewFilesForm from "./ViewFilesForm";
 
-import logo from '../../assets/logo.jpg'
-import CreateWordcloud from "./Wordcloud";
+import axios from 'axios';
+
 import SignInPage from "../loginPage";
-import FrontPageWordcloud from "../FontPageWordcloud";
 
+
+const {API_URL} = require('../../config.json')
 
 const ImageURL = "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df290f5892d944_full_logo_black_RGB.svg"
 
@@ -16,7 +16,12 @@ function FrontPage() {
     const [image, SetNetworkStatus] = useState('error')
 
     async function SubmitForm(wordcloudID) {
-       //console.log('Submtted form' + wordcloudID)
+        try {
+            let result = await axios.get(API_URL + 'wordcloud/'+ wordcloudID)
+            return result
+        } catch(error) {
+            return 0
+        }
     }
 
     return(
@@ -24,7 +29,10 @@ function FrontPage() {
             <header className="FrontPage">
                 <NavigationBar/>
                 <img height = {50} width={500} src={ImageURL}></img>
-                <SignInPage/>
+                <div height={500}>
+                    <SignInPage SubmitForm={SubmitForm}/>
+                </div>
+                
             </header>
         </div>    
     )
