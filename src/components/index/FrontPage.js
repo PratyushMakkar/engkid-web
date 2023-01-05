@@ -4,6 +4,11 @@ import ViewFilesForm from "./ViewFilesForm";
 
 import logo from '../../assets/logo.jpg'
 import CreateWordcloud from "./Wordcloud";
+import SignInPage from "../loginPage";
+import FrontPageWordcloud from "../FontPageWordcloud";
+
+
+const ImageURL = "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df290f5892d944_full_logo_black_RGB.svg"
 
 function FrontPage() {
     const [wordcloudID, SetWordcloudID] = useState('')
@@ -18,15 +23,8 @@ function FrontPage() {
         <div>
             <header className="FrontPage">
                 <NavigationBar/>
-                <ViewFilesForm
-                    SubmitForm = {SubmitForm}
-                />
-                <div className="wordcloud">
-                    <CreateWordcloud
-                        status = {status}
-                        image = {image}
-                    />
-                </div>
+                <img height = {50} width={500} src={ImageURL}></img>
+                <SignInPage/>
             </header>
         </div>    
     )

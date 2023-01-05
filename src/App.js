@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import FrontPage from './components/index/FrontPage';
 import FilesScreen from './components/filesScreen/FilesScreen';
 import { ReturnUserFiles } from './api/userService';
+import SignInPage from './components/loginPage';
 
 function App() {
   console.log(ReturnUserFiles("username15", "password"))

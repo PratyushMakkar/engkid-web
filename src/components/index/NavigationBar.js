@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+
 
 import '../css/ViewFilesForm.css'
 
@@ -10,15 +9,15 @@ class NavigationBar extends React.Component {
 
     render() {
         return(
-            <div className = "frontPage-navbar">
+            <div id= "frontPage-navbar">
                 <div>
                     <a href="/ ">
-                        <img src={logo} alt="logo" className='logo-image'/>
+                        <img src={logo} alt="logo" id='logo-image'/>
                     </a>
                 </div>
-                <div className='documentation'>
-                    <a href= 'https://github.com/PratyushMakkar/UW_EngKid/tree/dev'>
-                        <text>Documentation</text>
+                <div >
+                    <a id='documentation' href= 'https://github.com/PratyushMakkar/UW_EngKid/tree/dev'>
+                        <text id = 'documentation-text'>Documentation</text>
                     </a>
                 </div>
             </div>
