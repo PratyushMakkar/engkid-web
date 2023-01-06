@@ -1,0 +1,25 @@
+
+#carousel {
+  margin: 0 auto;
+  margin-top: 250px;
+}
+.caraousel-page {
+  align-self: center;
+}
+
+.Container{
+  font-family: arial;
+  font-size: 24px;
+  margin: 0 auto;
+  width: 675px;
+  height: 250px;
+}
+
+.carousel-image {
+  margin-left: 50px;
+}
+
+
+#data_svg {
+    height: 150px;
+}

@@ -6,6 +6,7 @@ import FrontPage from './components/index/FrontPage';
 import FilesScreen from './components/filesScreen/FilesScreen';
 import { ReturnUserFiles } from './api/userService';
 import SignInPage from './components/loginPage';
+import CreateAnalyticsPage from './components/analyticsScreen/analyticsPage'
 
 function App() {
   console.log(ReturnUserFiles("username15", "password"))
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<FrontPage/>} />
+        <Route path = "/analytics" element = {<CreateAnalyticsPage/>}/>
       </Routes>
     </Router>
   );
