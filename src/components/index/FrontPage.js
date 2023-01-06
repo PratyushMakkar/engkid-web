@@ -5,6 +5,7 @@ import axios from 'axios';
 import SignInPage from "../loginPage";
 import InformationRow from "./InformationBox";
 import DiscordScreen from '../discordScreen';
+import DiscordAppBar from "../AppBar";
 
 import '../css/FrontPage.css'
 
@@ -30,6 +31,9 @@ function FrontPage() {
 
     return(
         <div>
+            <header>
+                <DiscordAppBar/>
+            </header>
             <Stack id="DiscordSignIn">
                 <Stack height={500}>
                     <img height = {50} width={500} src={ImageURL}></img>

@@ -11,7 +11,7 @@ function DiscordScreen() {
           <Box sx={{width:'75%', height:'300px'}} style={{ borderRadius: '6px'}}>
             <Box>
               <GitHubIcon sx={{mt:10, ml:12}} style={{color: '#fffff0', fontSize: '900%' }}></GitHubIcon>
-              </Box>
+            </Box>
           </Box>
         </Stack>
       </Card>
