@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import '../components/css/App.css'
 
-
 export default function SignInPage({SubmitForm}) {
     const [wordcloudID, SetWordcloudID] = useState('')
     const [status, SetStatus] = useState('empty')
