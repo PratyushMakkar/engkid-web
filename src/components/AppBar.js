@@ -17,16 +17,20 @@ function DiscordAppBar() {
             <Box sx={{mr:1, ml:2}}>
               <Typography sx={{height:"100%"}} component="div" color="#ffffff">
                 <Box sx={{fontSize: 14, fontWeight:'bold', fontStyle: 'oswald'}}>
-                    UW Eng Kid Bot
+                    Discorgraf
                 </Box>
               </Typography>
             </Box>
           </Link>
           <Divider orientation="vertical" flexItem />
           <Box sx={{ml:2, height:"100%"}}>
-            <GitHubIcon sx={{mt:1.8}} style={{color: '#fffff0', fontSize: '175%' }}></GitHubIcon>
+            <a href='https://github.com/PratyushMakkar/EngKidBackend'>
+              <GitHubIcon sx={{mt:1.8}} style={{color: '#fffff0', fontSize: '175%' }}></GitHubIcon>
+            </a>
           </Box>
-          <Box sx={{ml:2}}><img height = {20} width={100} src={ImageURL}></img></Box>
+          <Box sx={{ml:2}}><a href="https://discord.gg/WVTAwK7F">
+            <img height = {20} width={100} src={ImageURL}></img></a>
+          </Box>
         </Stack>
       </Box>
       <Box sx={{width:'70%', height:'100%'}} style={{borderRadius: '6px'}}/>

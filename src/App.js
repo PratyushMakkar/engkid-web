@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import FrontPage from './components/index/FrontPage';
 import FilesScreen from './components/filesScreen/FilesScreen';
 import { ReturnUserFiles } from './api/userService';
-import SignInPage from './components/loginPage';
+import SignUpPage from './components/SignUpPage/SignUpPage';
 import CreateAnalyticsPage from './components/analyticsScreen/analyticsPage'
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FrontPage/>} />
         <Route path = "/analytics" element = {<CreateAnalyticsPage/>}/>
+        <Route path = "/signup" element = {<SignUpPage/>}/>
       </Routes>
     </Router>
   );

@@ -9,15 +9,15 @@
 }
 
 .Container{
+  background-color: #202225;
   font-family: arial;
   font-size: 24px;
   margin: 0 auto;
-  width: 675px;
+  width: 650px;
 }
 
 #AnalyticsPage{
-  background-color: #202225;
-  color: #202225;
+  
 }
 
 .carousel-image {

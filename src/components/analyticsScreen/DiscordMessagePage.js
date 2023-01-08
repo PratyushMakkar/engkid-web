@@ -7,9 +7,9 @@ import {CardGiftcard, ControlPoint, GifBoxRounded, Mood} from '@mui/icons-materi
 function DiscordMessagePage({text}) {
   return <div className="caraousel-page">
     <div className="Container">
-      <Card sx={{mb:3, mr:3}} elevation={4} style={{ borderRadius: '6px', backgroundColor: "#36393f"}}>
+      <Card sx={{width:"100%", mb:3, mr:3}} elevation={4} style={{ borderRadius: '6px', backgroundColor: "#36393f"}}>
         <Stack sx={{mb:1, mt:1}} justifyContent="center" alignItems="center" direction="row" spacing={2}>
-          <Box justifyContent="top" alignItems="top">
+          <Box sx={{height:"100%"}}>
             <ControlPoint style={{ color: '#b9bbbe' }}/>
           </Box>
           <Divider orientation="vertical" flexItem />

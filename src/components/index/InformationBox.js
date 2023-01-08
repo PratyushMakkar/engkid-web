@@ -12,15 +12,15 @@ function InformationRow() {
           <DiscordMessagePage
               text={
                 <Box sx={{maxWidth: 450, fontStyle: 'Uni Sans', m: 1 }}>
-                    Visualize and analyze your data using UW Eng Kid bot.
-                    To get started, add the bot into your server.   
+                    To sign up, simply add the Discograf bot into your server. Use your 
+                    user and server ID to then analyze your data.   
                 </Box>
               }/>
         </Box>
         <Box sx={{mt:8, height: '100%', width:'50%'}} >
           <Typography component="div" color="#ffffff">
             <Box sx={{maxWidth: 450, fontSize: 18, fontWeight:'bold', fontStyle: 'oswald', m: 1 }}>
-                Generate insights about your discord data using wordclouds, sentiment analysis. We continue to
+                Generate insights about your discord data in seconds using wordclouds, sentiment analysis. We continue to
                 add more features! 
             </Box>
           </Typography>

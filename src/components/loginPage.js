@@ -24,7 +24,7 @@ export default function SignInPage({SubmitForm}) {
             <form onSubmit= {handleSubmit} action="/home">
                 <p>
                     <label>Wordcloud ID</label>
-                    <Link to="/forget-password"><label className="right-label">Forget your ID?</label></Link>
+                    <Link to="/signup"><label className="right-label">Forget your ID?</label></Link>
                     <br/>
                     <input disabled = {status==='submitting'}
                         onChange={handleTextAreaChange}
@@ -39,7 +39,7 @@ export default function SignInPage({SubmitForm}) {
                 </p>
             </form>
             <footer>
-                <p>Unsure? <Link to="/register">Create a wordcloud ID to access data!</Link>.</p>
+                <p>Unsure? <Link to="/signup">Create a wordcloud ID to access data!</Link>.</p>
             </footer>
         </div>
     )
